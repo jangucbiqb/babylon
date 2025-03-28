@@ -25,12 +25,14 @@ source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
 ```
 
-# set vars
+**set vars**
+```
 echo "export WALLET="wallet"" >> $HOME/.bash_profile
 echo "export MONIKER="test"" >> $HOME/.bash_profile
 echo "export BABYLON_CHAIN_ID="bbn-test-5"" >> $HOME/.bash_profile
 echo "export BABYLON_PORT="60"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
+```
 
 # download binary
 cd $HOME
