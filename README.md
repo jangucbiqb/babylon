@@ -53,9 +53,11 @@ sed -i \
 -e "s/node = .*/node = \"tcp:\/\/localhost:${BABYLON_PORT}657\"/" $HOME/.babylond/config/client.toml
 ```
 
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.babylond/config/genesis.json https://server-7.itrocket.net/testnet/babylon/genesis.json
 wget -O $HOME/.babylond/config/addrbook.json  https://server-7.itrocket.net/testnet/babylon/addrbook.json
+```
 
 # set seeds and peers
 SEEDS="0c949c3bcd83b81c794af8c3ae026a97d9c4564e@babylon-testnet-seed.itrocket.net:60656"
