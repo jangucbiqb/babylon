@@ -119,13 +119,15 @@ WantedBy=multi-user.target
 EOF
 ```
 
-# reset and download snapshot
+**reset and download snapshot**
+```
 babylond tendermint unsafe-reset-all --home $HOME/.babylond
 if curl -s --head curl https://server-7.itrocket.net/testnet/babylon/babylon_2025-03-20_547863_snap.tar.lz4 | head -n 1 | grep "200" > /dev/null; then
   curl https://server-7.itrocket.net/testnet/babylon/babylon_2025-03-20_547863_snap.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.babylond
     else
   echo "no snapshot found"
 fi
+```
 
 # enable and start service
 sudo systemctl daemon-reload
