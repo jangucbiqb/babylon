@@ -129,7 +129,8 @@ if curl -s --head curl https://server-7.itrocket.net/testnet/babylon/babylon_202
 fi
 ```
 
-# enable and start service
+**enable and start service**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable babylond
 sudo systemctl restart babylond && sudo journalctl -u babylond -fo cat
@@ -137,6 +138,8 @@ Automatic Installation
 pruning: custom: 100/0/19 | indexer: null
 
 source <(curl -s https://itrocket.net/api/testnet/babylon/autoinstall/)
+```
+
 Create wallet
 # to create a new wallet, use the following command. don’t forget to save the mnemonic
 babylond keys add $WALLET
