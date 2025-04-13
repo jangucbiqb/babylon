@@ -146,8 +146,10 @@ Create wallet
 babylond keys add $WALLET
 ```
 
-# to restore exexuting wallet, use the following command
+**to restore exexuting wallet, use the following command**
+```
 babylond keys add $WALLET --recover
+```
 
 # save wallet and validator address
 WALLET_ADDRESS=$(babylond keys show $WALLET -a)
