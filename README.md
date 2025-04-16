@@ -160,8 +160,10 @@ echo "export VALOPER_ADDRESS="$VALOPER_ADDRESS >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-# check sync status, once your node is fully synced, the output from above will print "false"
+**check sync status, once your node is fully synced, the output from above will print "false"**
+```
 babylond status 2>&1 | jq 
+```
 
 # before creating a validator, you need to fund your wallet and check balance
 babylond query bank balances $WALLET_ADDRESS 
