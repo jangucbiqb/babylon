@@ -244,10 +244,13 @@ sudo ufw allow ${BABYLON_PORT}656/tcp
 sudo ufw enable
 ```
 
-Delete node
+**Delete node**
+```
 sudo systemctl stop babylond
 sudo systemctl disable babylond
 sudo rm -rf /etc/systemd/system/babylond.service
 sudo rm $(which babylond)
 sudo rm -rf $HOME/.babylond
 sed -i "/BABYLON_/d" $HOME/.bash_profile
+```
+
